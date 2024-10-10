@@ -12,3 +12,8 @@ nest new academia-backend
 ```bash
 nest g resource name
 ```
+
+## instalar TypeORM SQLite
+```bash
+npm i @nestjs/typeorm typeorm sqlite3
+```
