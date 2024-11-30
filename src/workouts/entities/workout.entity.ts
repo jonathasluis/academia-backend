@@ -1,5 +1,5 @@
-import { User } from 'src/users/entities/user.entity';
-import { WorkoutSession } from 'src/workout-session/entities/workout-session.entity';
+import { User } from '../../users/entities/user.entity';
+import { WorkoutSession } from '../../workout-session/entities/workout-session.entity';
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn, OneToMany, ManyToOne, JoinColumn} from 'typeorm';
 
 @Entity()
@@ -12,14 +12,6 @@ export class Workout {
 
     @Column({ length: 100, nullable: true })
     description: string;
-
-    @ManyToOne(() => User, (user) => user.workouts, { onDelete: 'CASCADE' })
-    @JoinColumn({ name: 'user_id' }) // Nome da coluna no banco
-    user: User;
-
-    @ManyToOne(() => User, (user) => user.workouts, { onDelete: 'SET NULL' })
-    @JoinColumn({ name: 'instructor_id' }) // Nome da coluna no banco
-    instructor: User;
 
     @Column({ name: 'init_date' })
     initDate: Date;
@@ -38,6 +30,14 @@ export class Workout {
   
     @DeleteDateColumn({ name: 'deleted_at' })
     deletedAt: string;
+
+    @ManyToOne(() => User, (user) => user.workouts, { onDelete: 'CASCADE' })
+    @JoinColumn({ name: 'user_id' }) // Nome da coluna no banco
+    user: User;
+
+    @ManyToOne(() => User, (user) => user.workouts, { onDelete: 'SET NULL' })
+    @JoinColumn({ name: 'instructor_id' }) // Nome da coluna no banco
+    instructor: User;
 
     @OneToMany(() => WorkoutSession, (workoutSession) => workoutSession.workout)
     workoutSessions: WorkoutSession[];

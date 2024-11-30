@@ -1,5 +1,5 @@
-import { Exercise } from 'src/exercises/entities/exercise.entity';
-import { Workout } from 'src/workouts/entities/workout.entity';
+import { Exercise } from '../../exercises/entities/exercise.entity';
+import { Workout } from '../../workouts/entities/workout.entity';
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn, OneToMany, ManyToMany, ManyToOne, JoinColumn} from 'typeorm';
 
 @Entity()

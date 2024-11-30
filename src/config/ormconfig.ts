@@ -5,7 +5,7 @@ const dataSourceOptions: DataSourceOptions = {
     database: 'db/bd.sql',
     synchronize: false,
     entities: [__dirname + '/../**/*.entity.{js,ts}'],
-    migrations: [__dirname + '../migrations/*.{js,ts}'],
+    migrations: [__dirname + '/../migrations/*.{js,ts}'],
   };
   
 const dataSource = new DataSource(dataSourceOptions);

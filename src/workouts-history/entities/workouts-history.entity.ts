@@ -1,4 +1,4 @@
-import { WorkoutSession } from 'src/workout-session/entities/workout-session.entity';
+import { WorkoutSession } from '../../workout-session/entities/workout-session.entity';
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn, OneToMany, OneToOne, JoinColumn} from 'typeorm';
 
 @Entity()

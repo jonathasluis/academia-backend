@@ -19,16 +19,16 @@ export class PhysicalAssessmentsController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.physicalAssessmentsService.findOne(+id);
+    return this.physicalAssessmentsService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updatePhysicalAssessmentDto: UpdatePhysicalAssessmentDto) {
-    return this.physicalAssessmentsService.update(+id, updatePhysicalAssessmentDto);
+    return this.physicalAssessmentsService.update(id, updatePhysicalAssessmentDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.physicalAssessmentsService.remove(+id);
+    return this.physicalAssessmentsService.remove(id);
   }
 }

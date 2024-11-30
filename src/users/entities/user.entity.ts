@@ -1,5 +1,5 @@
-import { PhysicalAssessment } from 'src/physical-assessments/entities/physical-assessment.entity';
-import { Workout } from 'src/workouts/entities/workout.entity';
+import { PhysicalAssessment } from '../../physical-assessments/entities/physical-assessment.entity';
+import { Workout } from '../../workouts/entities/workout.entity';
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, DeleteDateColumn, OneToMany} from 'typeorm';
 
 @Entity()
